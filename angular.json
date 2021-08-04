@@ -31,9 +31,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@nebular/theme/styles/prebuilt/dark.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+			"allowedCommonJsDependencies": [
+				"random-seed"
+			]
           },
           "configurations": {
             "production": {

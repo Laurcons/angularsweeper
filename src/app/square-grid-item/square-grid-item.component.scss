@@ -1,0 +1,50 @@
+button.cell {
+    width: 35px;
+    height: 35px;
+    background: lightgray;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+button.cell.covered {
+    background: darkgray;
+}
+
+// button.cell:not(.covered):active,
+// button.cell.flagged:active {
+// 	cursor: not-allowed;
+// }
+button.cell.covered:active {
+    background: #333;
+    cursor: help;
+}
+
+button.cell.flagged {}
+
+button.cell.number {
+    &-1 {
+        color: #0000fd;
+    }
+    &-2 {
+        color: #017e00;
+    }
+    &-3 {
+        color: #ff0000;
+    }
+    &-4 {
+        color: #010180;
+    }
+    &-5 {
+        color: #7f0300;
+    }
+    &-6 {
+        color: #008080;
+    }
+    &-7 {
+        color: #000000;
+    }
+    &-8 {
+        color: #ffae00;
+    }
+}

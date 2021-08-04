@@ -1,0 +1,26 @@
+<button [ngClass]="classes" (click)="onClick()" (contextmenu)="onRightClick($event)">
+	<ng-container *ngIf="cell">
+		<ng-container *ngIf="cell.isUncovered || isLost">
+			<ng-container *ngIf="cell.value === 'bomb'">
+				<img [src]="bombUrl"/>
+			</ng-container>
+			<ng-container *ngIf="cell.value !== 'bomb' && cell.value !== 0">
+				{{ cell.value }}
+			</ng-container>
+			<ng-container *ngIf="cell.value !== 'bomb' && cell.value === 0">
+				&nbsp;
+			</ng-container>
+		</ng-container>
+		<ng-container *ngIf="!cell.isUncovered && !isLost">
+			<ng-container *ngIf="cell.isFlagged">
+				<img [src]="flagUrl">
+			</ng-container>
+			<ng-container *ngIf="!cell.isFlagged">
+				&nbsp;
+			</ng-container>
+		</ng-container>
+	</ng-container>
+	<ng-container *ngIf="!cell">
+		not cell lol
+	</ng-container>
+</button>
